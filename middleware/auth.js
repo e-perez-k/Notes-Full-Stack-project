@@ -1,0 +1,21 @@
+const jwt = require("jsonwebtoken");
+
+const auth = (req, res, next) => {
+  try {
+    const token = req.header("Authorization");
+    if (!token)
+      return res.status(400).json({ mensaje: "Invalid Authentication" });
+
+    jwt.verify(token, process.env.TOKEN_SECRET, (err, user) => {
+      if (err)
+        return res.status(400).json({ mensaje: "Autorización no válida" });
+
+      req.user = user;
+      next();
+    });
+  } catch (err) {
+    return res.status(500).json({ mensaje: err.message });
+  }
+};
+
+module.exports = auth;
