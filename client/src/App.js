@@ -21,7 +21,7 @@ function App() {
         setIsLogin(false);
       }
     };
-    checkLogin(); // no haría falta
+    checkLogin(); // no haría falta? Si quito esta función se desloguea
   }, []);
 
   return (
