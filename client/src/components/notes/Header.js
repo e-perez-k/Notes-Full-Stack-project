@@ -8,11 +8,9 @@ export default function Header({ setIsLogin }) {
   };
   return (
     <header>
-      {/* <div className="logo"> */}
       <h1>
-        <Link to="/">Mis Notas</Link>
+        <Link to="/">Simple Notes Application</Link>
       </h1>
-      {/* </div> */}
       <ul>
         <li>
           <Link to="/">Home</Link>

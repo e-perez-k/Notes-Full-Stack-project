@@ -11,6 +11,7 @@ function App() {
       const token = localStorage.getItem("tokenStore");
       if (token) {
         const verified = await axios.get("/users/verify", {
+          // "/http://localhost:5000/users/verify"
           headers: { Authorization: token },
         });
         console.log(verified);
@@ -20,7 +21,7 @@ function App() {
         setIsLogin(false);
       }
     };
-    checkLogin();
+    checkLogin(); // no haría falta
   }, []);
 
   return (

@@ -44,7 +44,7 @@ export default function Home() {
           <p>{note.content}</p>
           <p>{format(note.date)}</p>
           <p>{note.name}</p>
-          <Link to={`/edit${note._id}`}> Editar</Link>
+          <Link to={`/edit/${note._id}`}> Editar</Link>
 
           <button onClick={() => deleteNote(note._id)}>Borrar nota</button>
         </div>

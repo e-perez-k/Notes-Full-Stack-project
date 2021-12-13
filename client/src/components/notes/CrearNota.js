@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 export default function CrearNota() {
   const [note, setNote] = useState({
@@ -75,7 +76,7 @@ export default function CrearNota() {
             onChange={onChangeInput}
           />
         </div>
-        <button type="submit">Guardar</button>
+        <Button type="submit">Guardar</Button>
       </form>
     </>
   );
