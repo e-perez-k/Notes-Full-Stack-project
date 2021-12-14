@@ -40,8 +40,8 @@ export default function Home() {
     <div>
       {notes.map((note) => (
         <div key={note._id}>
-          <h4>{note.title}</h4>
-          <p>{note.content}</p>
+          <h5>{note.title}</h5>
+          <h6>{note.content}</h6>
           <p>{format(note.date)}</p>
           <p>{note.name}</p>
           <Link to={`/edit/${note._id}`}> Editar</Link>

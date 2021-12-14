@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Button } from "react-bootstrap";
 
 export default function Login({ setIsLogin }) {
   const [user, setUser] = useState({
@@ -48,8 +49,9 @@ export default function Login({ setIsLogin }) {
 
   return (
     <section>
+      <h3>Simple Notes Application</h3>
       <div className="Login">
-        <h2>Login</h2>
+        <h4>Login</h4>
         <form onSubmit={loginSubmit}>
           <input
             type="email"
@@ -70,7 +72,9 @@ export default function Login({ setIsLogin }) {
             autoComplete="true"
             onChange={onChangeInput}
           />
-          <button type="submit">Login</button>
+          <Button variant="light" type="submit">
+            Login
+          </Button>
           <p>
             No tienes cuenta?
             <span> Regístrate ahora</span>
@@ -79,7 +83,7 @@ export default function Login({ setIsLogin }) {
         </form>
       </div>
       <div className="Register">
-        <h2>Register</h2>
+        <h4>Register</h4>
         <form onSubmit={registerSubmit}>
           <input
             type="text"
@@ -109,7 +113,9 @@ export default function Login({ setIsLogin }) {
             autoComplete="true"
             onChange={onChangeInput}
           />
-          <button type="submit">Register</button>
+          <Button variant="primary" type="submit">
+            Register
+          </Button>
           <p>
             Tienes cuenta?
             <span> Inicia sesión</span>
