@@ -9,13 +9,24 @@ export default function Notes({ setIsLogin }) {
   return (
     <header>
       <BrowserRouter>
-        <Header setIsLogin={setIsLogin} />
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/create" element={<CrearNota />} />
-          <Route path="/edit/:id" element={<EditarNota />} />
-        </Routes>
+        <div className="logueado">
+          <Header setIsLogin={setIsLogin} />
+          <div>
+            <Routes>
+              <Route path="/" element={<Home />} />
+            </Routes>
+          </div>
+          <div>
+            <Routes>
+              <Route path="/create" element={<CrearNota />} />
+            </Routes>
+          </div>
+          <div>
+            <Routes>
+              <Route path="/edit/:id" element={<EditarNota />} />
+            </Routes>
+          </div>
+        </div>
       </BrowserRouter>
     </header>
   );

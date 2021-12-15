@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Container, Form, Row } from "react-bootstrap";
 
 export default function Login({ setIsLogin }) {
   const [user, setUser] = useState({
@@ -49,11 +49,13 @@ export default function Login({ setIsLogin }) {
 
   return (
     <section>
-      <h3>Simple Notes Application</h3>
-      <div className="Login">
+      <h3 className="titulo_header">Simple Notes Application</h3>
+      <div className="login">
         <h4>Login</h4>
-        <form onSubmit={loginSubmit}>
-          <input
+        {/* <Container> */}
+        <Form onSubmit={loginSubmit}>
+          <Form.Control
+            className="w-50"
             type="email"
             name="email"
             id="login-email"
@@ -62,7 +64,8 @@ export default function Login({ setIsLogin }) {
             value={user.email}
             onChange={onChangeInput}
           />
-          <input
+          <Form.Control
+            className="w-50"
             type="password"
             name="password"
             id="login-password"
@@ -72,20 +75,21 @@ export default function Login({ setIsLogin }) {
             autoComplete="true"
             onChange={onChangeInput}
           />
-          <Button variant="light" type="submit">
+          <Button variant="outline-secondary" size="sm" type="submit">
             Login
           </Button>
-          <p>
-            No tienes cuenta?
-            <span> Regístrate ahora</span>
-          </p>
+
           <h3>{err}</h3>
-        </form>
+        </Form>
+        {/* </Container> */}
       </div>
-      <div className="Register">
-        <h4>Register</h4>
+
+      <div className="register">
+        <p>No tienes cuenta? Regístrate ahora</p>
+
         <form onSubmit={registerSubmit}>
-          <input
+          <Form.Control
+            className="w-50"
             type="text"
             name="name"
             id="register-name"
@@ -94,7 +98,8 @@ export default function Login({ setIsLogin }) {
             value={user.name}
             onChange={onChangeInput}
           />
-          <input
+          <Form.Control
+            className="w-50"
             type="email"
             name="email"
             id="register-email"
@@ -103,7 +108,8 @@ export default function Login({ setIsLogin }) {
             value={user.email}
             onChange={onChangeInput}
           />
-          <input
+          <Form.Control
+            className="w-50"
             type="password"
             name="password"
             id="register-password"
@@ -113,13 +119,10 @@ export default function Login({ setIsLogin }) {
             autoComplete="true"
             onChange={onChangeInput}
           />
-          <Button variant="primary" type="submit">
+          <Button variant="primary" size="sm" type="submit">
             Register
           </Button>
-          <p>
-            Tienes cuenta?
-            <span> Inicia sesión</span>
-          </p>
+
           <h3>{err}</h3>
         </form>
       </div>
