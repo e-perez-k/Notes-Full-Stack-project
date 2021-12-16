@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 
 export default function CrearNota() {
   const [note, setNote] = useState({
@@ -41,11 +41,11 @@ export default function CrearNota() {
 
   return (
     <>
-      <h2>Crear nota</h2>;
-      <form on onSubmit={createNote} autoComplete="off">
+      <h2>Crear nota</h2>
+      <Form on onSubmit={createNote} autoComplete="off">
         <div>
           <label htmlFor="title">Title</label>
-          <input
+          <Form.Control
             type="text"
             value={note.title}
             id="title"
@@ -56,13 +56,13 @@ export default function CrearNota() {
         </div>
         <div>
           <label htmlFor="content">Content</label>
-          <input
-            type="text"
+          <Form.Control
+            as="textarea"
             value={note.content}
             id="content"
             name="content"
             required
-            rows="10"
+            rows="5"
             onChange={onChangeInput}
           />
         </div>
@@ -76,8 +76,10 @@ export default function CrearNota() {
             onChange={onChangeInput}
           />
         </div>
-        <Button type="submit">Guardar</Button>
-      </form>
+        <Button size="sm" type="submit">
+          Guardar
+        </Button>
+      </Form>
     </>
   );
 }
