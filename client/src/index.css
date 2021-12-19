@@ -16,7 +16,7 @@ body {
   background-color: whitesmoke;
 }
 
-.titulo_header {
+h4 {
   text-align: center;
   margin-bottom: 15px;
   margin-top: 20px;
@@ -43,3 +43,27 @@ body {
 
   justify-content: space-around;
 } */
+
+li {
+  list-style: none;
+}
+
+.titulo_header {
+  margin-bottom: 20px;
+}
+
+.nav_Create_Logout {
+  margin-bottom: 40px;
+}
+
+.date {
+  margin-bottom: 20px;
+}
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+}
+.name_date {
+  display: flex;
+  justify-content: space-between;
+}

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { format } from "timeago.js";
 import axios from "axios";
+import { Card, Button, Row } from "react-bootstrap";
 
 export default function Home() {
   const [notes, setNotes] = useState([]);
@@ -37,18 +38,44 @@ export default function Home() {
   };
 
   return (
-    <div>
-      {notes.map((note) => (
-        <div key={note._id}>
-          <h5>{note.title}</h5>
-          <h6>{note.content}</h6>
-          <p>{format(note.date)}</p>
-          <p>{note.name}</p>
-          <Link to={`/edit/${note._id}`}> Editar</Link>
+    <>
+      <Row className="justify-content-center">
+        {notes.map((note) => (
+          <Card
+            className="m-3"
+            style={{ width: "20rem" }}
+            bg="light"
+            border="dark"
+            key={note._id}
+          >
+            <Card.Body>
+              <Card.Title>{note.title}</Card.Title>
+              <Card.Text>{note.content}</Card.Text>
+              <div className="name_date">
+                <p className="text-muted">{note.name}</p>
+                <p className="text-muted">{format(note.date)}</p>
+              </div>
+              <div className="cardFooter">
+                <Link
+                  style={{ textDecoration: "none" }}
+                  to={`/edit/${note._id}`}
+                >
+                  {" "}
+                  Editar
+                </Link>
 
-          <button onClick={() => deleteNote(note._id)}>Borrar nota</button>
-        </div>
-      ))}
-    </div>
+                <Button
+                  variant="danger"
+                  size="sm"
+                  onClick={() => deleteNote(note._id)}
+                >
+                  Borrar
+                </Button>
+              </div>
+            </Card.Body>
+          </Card>
+        ))}
+      </Row>
+    </>
   );
 }

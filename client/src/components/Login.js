@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Button, Container, Form, Row, Col } from "react-bootstrap";
 
 export default function Login({ setIsLogin }) {
@@ -49,7 +49,7 @@ export default function Login({ setIsLogin }) {
 
   return (
     <section>
-      <h3 className="titulo_header">Simple Notes Application</h3>
+      <h4 className="titulo_header">SIMPLE NOTES APPLICATION</h4>
       <div className="login">
         <h4>Login</h4>
         <Container>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export default function Header({ setIsLogin }) {
@@ -8,18 +9,28 @@ export default function Header({ setIsLogin }) {
   };
   return (
     <header>
-      <h3>
-        {/* <Link to="/">Simple Notes Application</Link> */}
-        Simple Notes Application
-      </h3>
-      <ul>
-        <li>
-          <Link to="/create">Crear Nota</Link>
-        </li>
-        <li onClick={logoutSubmit}>
-          <Link to="/">Logout</Link>
-        </li>
-      </ul>
+      <h4 className="titulo_header">SIMPLE NOTES APPLICATION</h4>
+      <Container>
+        <Row className="nav_Create_Logout">
+          <Col></Col>
+          <Col md="auto">
+            <Link style={{ textDecoration: "none" }} to="/create">
+              Crear Nota
+            </Link>
+          </Col>
+          <Col xs={1}></Col>
+          <Col md="auto">
+            <Link
+              style={{ textDecoration: "none" }}
+              onClick={logoutSubmit}
+              to="/"
+            >
+              Logout
+            </Link>
+          </Col>
+          <Col></Col>
+        </Row>
+      </Container>
     </header>
   );
 }

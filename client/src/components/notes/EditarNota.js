@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
+import { Button, Container, Form, Row, Col } from "react-bootstrap";
 
 export default function EditarNota({}) {
   const [note, setNote] = useState({
@@ -63,43 +64,61 @@ export default function EditarNota({}) {
 
   return (
     <>
-      <h2>Editar nota</h2>;
-      <form on onSubmit={editNote} autoComplete="off">
-        <div>
-          <label htmlFor="title">Title</label>
-          <input
-            type="text"
-            value={note.title}
-            id="title"
-            name="title"
-            required
-            onChange={onChangeInput}
-          />
-        </div>
-        <div>
-          <label htmlFor="content">Content</label>
-          <input
-            type="text"
-            value={note.content}
-            id="content"
-            name="content"
-            required
-            rows="10"
-            onChange={onChangeInput}
-          />
-        </div>
-        <div>
-          <label htmlFor="date">Date: {note.date}</label>
-          <input
-            type="date"
-            id="date"
-            name="date"
-            required
-            onChange={onChangeInput}
-          />
-        </div>
-        <button type="submit">Guardar</button>
-      </form>
+      <Container>
+        <Row>
+          <Col></Col>
+          <Col>
+            <h6>EDITAR NOTA</h6>
+          </Col>
+          <Col></Col>
+        </Row>
+        <Row>
+          <Col></Col>
+          <Col>
+            <Form on onSubmit={editNote} autoComplete="off">
+              <div>
+                <Form.Label htmlFor="title">Title</Form.Label>
+                <Form.Control
+                  type="text"
+                  value={note.title}
+                  id="title"
+                  name="title"
+                  required
+                  onChange={onChangeInput}
+                />
+              </div>
+              <div>
+                <Form.Label htmlFor="content">Content</Form.Label>
+                <Form.Control
+                  type="text"
+                  value={note.content}
+                  id="content"
+                  name="content"
+                  required
+                  rows="10"
+                  onChange={onChangeInput}
+                />
+              </div>
+              <div>
+                <Form.Label htmlFor="date">Date: {note.date}</Form.Label>
+                <Form.Control
+                  type="date"
+                  id="date"
+                  name="date"
+                  required
+                  onChange={onChangeInput}
+                />
+              </div>
+              <div className="d-grid gap-2">
+                <Button size="sm" type="submit">
+                  Guardar
+                </Button>
+              </div>
+            </Form>
+          </Col>
+          <Col></Col>
+        </Row>
+      </Container>
     </>
   );
 }
