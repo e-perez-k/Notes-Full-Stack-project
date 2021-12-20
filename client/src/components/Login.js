@@ -57,8 +57,8 @@ export default function Login({ setIsLogin }) {
   };
 
   return (
-    <BrowserRouter>
-      <section>
+    <section>
+      <BrowserRouter>
         <h4 className="titulo_header">SIMPLE NOTES APPLICATION</h4>
         <div className="login">
           <h4>Login</h4>
@@ -154,7 +154,8 @@ export default function Login({ setIsLogin }) {
             <p></p>
           )}
         </div>
-      </section>
-    </BrowserRouter>
+      </BrowserRouter>
+      <footer>MERN academic project after 3 months programming</footer>
+    </section>
   );
 }
