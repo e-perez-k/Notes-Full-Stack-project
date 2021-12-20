@@ -58,8 +58,15 @@ export default function Login({ setIsLogin }) {
 
   return (
     <section>
-      <BrowserRouter>
+      <div className="nav">
+        <img
+          src="https://i.ibb.co/4VLM8cK/Mesa-de-trabajo-1.png"
+          alt="Pos It icon"
+          border="0"
+        ></img>
         <h4 className="titulo_header">SIMPLE NOTES APPLICATION</h4>
+      </div>
+      <BrowserRouter>
         <div className="login">
           <h4>Login</h4>
           <Container>

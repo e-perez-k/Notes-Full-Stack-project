@@ -67,3 +67,14 @@ li {
   display: flex;
   justify-content: space-between;
 }
+
+img {
+  height: 60px;
+  margin-right: 10px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
