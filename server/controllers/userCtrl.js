@@ -26,11 +26,11 @@ const userCtrl = {
       const { email, password } = req.body;
       const user = await Users.findOne({ email: email });
       if (!user)
-        return res.status(400).json({ mensaje: "El usuario no existe" });
+        return res.status(400).json({ mensaje: "El login ha fallado" });
 
       const isMatch = await bcrypt.compare(password, user.password);
       if (!isMatch)
-        return res.status(400).json({ mensaje: "Password incorrecto" });
+        return res.status(400).json({ mensaje: "El login ha fallado" });
 
       // if login success create token
       const payload = { id: user.id, name: user.username };

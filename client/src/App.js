@@ -5,13 +5,13 @@ import Notes from "./components/Notes";
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
+  // TODO Establecer otro estado para el input registro, para que no escriba simultaneamente en los dos inputs
 
   useEffect(() => {
     const checkLogin = async () => {
       const token = localStorage.getItem("tokenStore");
       if (token) {
         const verified = await axios.get("http://localhost:5000/users/verify", {
-          // "/http://localhost:5000/users/verify"
           headers: { Authorization: token },
         });
         console.log(verified);
@@ -21,11 +21,11 @@ function App() {
         setIsLogin(false);
       }
     };
-    checkLogin(); // no haría falta? Si quito esta función se desloguea
+    checkLogin(); // TODO ¿Igual no hace falta? Si quito esta función se desloguea
   }, []);
 
   return (
-    <div className="App">
+    <div>
       {isLogin ? (
         <Notes setIsLogin={setIsLogin} />
       ) : (

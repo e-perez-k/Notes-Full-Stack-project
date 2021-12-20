@@ -3,13 +3,13 @@ import Header from "./notes/Header";
 import Home from "./notes/Home";
 import CrearNota from "./notes/CrearNota";
 import EditarNota from "./notes/EditarNota";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 export default function Notes({ setIsLogin }) {
   return (
     <header>
       <BrowserRouter>
-        <div className="logueado">
+        <div>
           <Header setIsLogin={setIsLogin} />
           <div>
             <Routes>

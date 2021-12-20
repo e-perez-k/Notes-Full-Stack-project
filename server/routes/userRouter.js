@@ -10,7 +10,6 @@ router.post("/register", userCtrl.registerUser);
 router.post("/login", userCtrl.loginUser);
 
 // VERIFICAR TOKEN
-
 router.get("/verify", userCtrl.verifiedToken);
 
 module.exports = router;
