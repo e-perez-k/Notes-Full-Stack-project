@@ -69,7 +69,7 @@ export default function EditarNota({}) {
         <Row>
           <Col></Col>
           <Col>
-            <h6>EDITAR NOTA</h6>
+            <h6>EDIT NOTE</h6>
           </Col>
           <Col></Col>
         </Row>
@@ -114,7 +114,7 @@ export default function EditarNota({}) {
               </div>
               <div className="d-grid gap-2">
                 <Button size="sm" type="submit">
-                  Guardar
+                  Save
                 </Button>
               </div>
             </Form>
@@ -123,7 +123,7 @@ export default function EditarNota({}) {
         </Row>
       </Container>
       <footer>
-        MERN academic project programming from scratch in three months
+        MERN academic programming project from scratch in three months
       </footer>
     </>
   );

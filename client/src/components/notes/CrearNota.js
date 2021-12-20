@@ -98,7 +98,7 @@ export default function CrearNota() {
         </Row>
       </Container>
       <footer>
-        MERN academic project programming from scratch in three months
+        MERN academic programming project from scratch in three months
       </footer>
     </>
   );

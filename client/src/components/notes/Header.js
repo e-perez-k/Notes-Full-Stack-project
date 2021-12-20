@@ -11,14 +11,20 @@ export default function Header({ setIsLogin }) {
     <header>
       <h4 className="titulo_header">SIMPLE NOTES APPLICATION</h4>
       <Container>
-        <Row className="nav_Create_Logout">
+        <Row className="nav_header">
+          <Col></Col>
+          <Col md="auto">
+            <Link style={{ textDecoration: "none" }} to="/">
+              Home
+            </Link>
+          </Col>
           <Col></Col>
           <Col md="auto">
             <Link style={{ textDecoration: "none" }} to="/create">
-              Crear Nota
+              Create Note
             </Link>
           </Col>
-          <Col xs={1}></Col>
+          <Col></Col>
           <Col md="auto">
             <Link
               style={{ textDecoration: "none" }}

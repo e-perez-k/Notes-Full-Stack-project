@@ -48,7 +48,7 @@ export default function Login({ setIsLogin }) {
         password: user.password2,
       });
       setUser({ name2: "", email2: "", password2: "" });
-      /* setErr(res.data.mensaje); */
+
       localStorage.setItem("tokenStore", res.data.token);
       setIsLogin(true);
     } catch (err) {
@@ -99,13 +99,13 @@ export default function Login({ setIsLogin }) {
 
         <div className="register">
           <p>
-            No tienes cuenta?{" "}
+            You don't have an account?{" "}
             <Link
               style={{ textDecoration: "none" }}
               to=""
               onClick={() => setRegistrar(true)}
             >
-              Regístrate ahora
+              Register now
             </Link>
           </p>
           {registrar ? (
@@ -156,7 +156,7 @@ export default function Login({ setIsLogin }) {
         </div>
       </BrowserRouter>
       <footer>
-        MERN academic project programming from scratch in three months
+        MERN academic programming project from scratch in three months
       </footer>
     </section>
   );

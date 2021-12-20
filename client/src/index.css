@@ -50,8 +50,10 @@ li {
   margin-bottom: 20px;
 }
 
-.nav_Create_Logout {
+.nav_header {
   margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .date {

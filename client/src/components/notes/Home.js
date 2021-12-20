@@ -61,7 +61,7 @@ export default function Home() {
                   to={`/edit/${note._id}`}
                 >
                   {" "}
-                  Editar
+                  Edit
                 </Link>
 
                 <Button
@@ -69,7 +69,7 @@ export default function Home() {
                   size="sm"
                   onClick={() => deleteNote(note._id)}
                 >
-                  Borrar
+                  Delete
                 </Button>
               </div>
             </Card.Body>
@@ -77,7 +77,7 @@ export default function Home() {
         ))}
       </Row>
       <footer>
-        MERN academic project programming from scratch in three months
+        MERN academic programming project from scratch in three months
       </footer>
     </>
   );
