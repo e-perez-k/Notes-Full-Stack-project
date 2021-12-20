@@ -122,6 +122,9 @@ export default function EditarNota({}) {
           <Col></Col>
         </Row>
       </Container>
+      <footer>
+        MERN academic project programming from scratch in three months
+      </footer>
     </>
   );
 }

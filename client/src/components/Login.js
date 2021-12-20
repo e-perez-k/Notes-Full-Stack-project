@@ -155,7 +155,9 @@ export default function Login({ setIsLogin }) {
           )}
         </div>
       </BrowserRouter>
-      <footer>MERN academic project after 3 months programming</footer>
+      <footer>
+        MERN academic project programming from scratch in three months
+      </footer>
     </section>
   );
 }

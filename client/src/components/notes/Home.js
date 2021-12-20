@@ -76,7 +76,9 @@ export default function Home() {
           </Card>
         ))}
       </Row>
-      <footer>MERN academic project after 3 months programming</footer>
+      <footer>
+        MERN academic project programming from scratch in three months
+      </footer>
     </>
   );
 }
