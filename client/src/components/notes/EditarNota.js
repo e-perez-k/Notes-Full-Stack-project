@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import { Button, Container, Form, Row, Col } from "react-bootstrap";
+import { format } from "timeago.js";
 
 export default function EditarNota({}) {
   const [note, setNote] = useState({
@@ -100,7 +101,9 @@ export default function EditarNota({}) {
                 />
               </div>
               <div>
-                <Form.Label htmlFor="date">Date: {note.date}</Form.Label>
+                <Form.Label htmlFor="date">
+                  Date: {format(note.date)}
+                </Form.Label>
                 <Form.Control
                   type="date"
                   id="date"
