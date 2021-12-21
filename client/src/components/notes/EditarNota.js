@@ -91,12 +91,12 @@ export default function EditarNota({}) {
               <div>
                 <Form.Label htmlFor="content">Content</Form.Label>
                 <Form.Control
-                  type="text"
+                  as="textarea"
                   value={note.content}
                   id="content"
                   name="content"
                   required
-                  rows="10"
+                  style={{ height: "200px" }}
                   onChange={onChangeInput}
                 />
               </div>

@@ -72,7 +72,7 @@ export default function CrearNota() {
                   id="content"
                   name="content"
                   required
-                  rows="5"
+                  style={{ height: "180px" }}
                   onChange={onChangeInput}
                 />
               </div>
