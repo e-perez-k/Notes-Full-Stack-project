@@ -11,7 +11,7 @@ export default function Header({ setIsLogin }) {
     <header>
       <div className="nav">
         <img
-          src="https://i.ibb.co/4VLM8cK/Mesa-de-trabajo-1.png"
+          src="https://i.ibb.co/9sVgVdD/Mesa-de-trabajo-1.png"
           alt="Pos It icon"
           border="0"
         ></img>
@@ -25,13 +25,13 @@ export default function Header({ setIsLogin }) {
               Home
             </Link>
           </Col>
-          <Col></Col>
+
           <Col md="auto">
             <Link style={{ textDecoration: "none" }} to="/create">
               Create Note
             </Link>
           </Col>
-          <Col></Col>
+
           <Col md="auto">
             <Link
               style={{ textDecoration: "none" }}

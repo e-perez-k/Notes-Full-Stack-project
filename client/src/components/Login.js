@@ -12,7 +12,7 @@ export default function Login({ setIsLogin }) {
     name2: "",
     email2: "",
     password2: "",
-  }); // TODO Establecer otro estado para el input registro para que no escriba simultaneamente en los dos inputs
+  }); // TODO Establecer otro estado para el input registro
 
   const [err, setErr] = useState("");
 
@@ -48,9 +48,9 @@ export default function Login({ setIsLogin }) {
         password: user.password2,
       });
       setUser({ name2: "", email2: "", password2: "" });
-
-      localStorage.setItem("tokenStore", res.data.token);
-      setIsLogin(true);
+      setErr(res.data.mensaje);
+      /* localStorage.setItem("tokenStore", res.data.token);
+      setIsLogin(true); */ // TODO debuguear error al crear la nota.
     } catch (err) {
       err.response.data.mensaje && setErr(err.response.data.mensaje);
     }
@@ -60,7 +60,7 @@ export default function Login({ setIsLogin }) {
     <section>
       <div className="nav">
         <img
-          src="https://i.ibb.co/4VLM8cK/Mesa-de-trabajo-1.png"
+          src="https://i.ibb.co/9sVgVdD/Mesa-de-trabajo-1.png"
           alt="Pos It icon"
           border="0"
         ></img>
