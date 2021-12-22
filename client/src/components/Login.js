@@ -68,8 +68,8 @@ export default function Login({ setIsLogin }) {
       </div>
       <BrowserRouter>
         <div className="login">
-          <h4>Login</h4>
-          <Container>
+          <h4 className="login">Login</h4>
+          <Container fluid>
             <Row>
               <Col></Col>
               <Col xs={5}>

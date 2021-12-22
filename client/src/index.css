@@ -1,5 +1,5 @@
 body {
-  background-color: whitesmoke;
+  background-color: rgb(236, 236, 236);
   height: 100vh;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -8,6 +8,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
 footer {
   display: flex;
   justify-content: center;
@@ -15,10 +20,6 @@ footer {
   padding: 10px 10px 10px 10px;
   bottom: 0;
   width: 100%;
-}
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 h4 {
@@ -77,4 +78,65 @@ img {
   display: flex;
   justify-content: center;
   margin-top: 15px;
+  align-items: center;
 }
+
+@media only screen and (max-width: 720px) {
+  .titulo_header {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .login {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  footer {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  p {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  img {
+    height: 30px;
+  }
+}
+
+/* @media only screen and (max-width: 720px) {
+  body {
+    width: 100%;
+    text-size-adjust: inherit;
+  }
+} */
+
+/* header {
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+  }
+  footer {
+    font-size: 9px;
+  }
+}
+@media only screen and (max-width: 720px) {
+  .card {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 720px) {
+  #mainBuscar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+} */

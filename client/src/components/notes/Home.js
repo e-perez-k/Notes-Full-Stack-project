@@ -42,6 +42,7 @@ export default function Home() {
       <Row className="justify-content-center">
         {notes.map((note) => (
           <Card
+            fluid
             className="m-3"
             style={{ width: "20rem" }}
             bg="light"

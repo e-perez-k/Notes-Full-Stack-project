@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Login from "./components/Login";
 import Notes from "./components/Notes";
+/* import "bootstrap/dist/css/bootstrap.min.css"; */
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
