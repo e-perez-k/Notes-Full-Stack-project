@@ -21,3 +21,7 @@ Requirements for the back:
 - Passport for user authentication (JWT in this case)
 - MongoDB Atlas
 - Router Express
+
+Feel free to comment or suggest improvements.
+
+I will appreciate it very much.
