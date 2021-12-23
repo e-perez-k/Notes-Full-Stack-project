@@ -1,6 +1,6 @@
 ### SIMPLE NOTES APPLICATION
 
-It's just an academic full stack development project.
+It's an academic full stack development project. From scratch in three months.
 
 Requirements for the front:
 
