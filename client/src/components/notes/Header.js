@@ -17,7 +17,7 @@ export default function Header({ setIsLogin }) {
         ></img>
         <h4 className="titulo_header">SIMPLE NOTES APPLICATION</h4>
       </div>
-      <Container fluid>
+      <Container>
         <Row className="nav_header">
           <Col></Col>
           <Col md="auto">

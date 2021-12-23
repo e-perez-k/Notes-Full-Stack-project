@@ -4,7 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { Button, Container, Form, Row, Col } from "react-bootstrap";
 import { format } from "timeago.js";
 
-export default function EditarNota({}) {
+export default function EditarNota() {
   const [note, setNote] = useState({
     title: "",
     content: "",

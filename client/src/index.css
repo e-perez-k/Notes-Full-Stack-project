@@ -110,6 +110,15 @@ img {
   }
 }
 
+@media only screen and (max-width: 720px) {
+  .nav_header {
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 /* @media only screen and (max-width: 720px) {
   body {
     width: 100%;
