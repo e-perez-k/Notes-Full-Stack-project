@@ -22,6 +22,4 @@ Requirements for the back:
 - MongoDB Atlas
 - Router Express
 
-Feel free to comment or suggest improvements.
-
-I will appreciate it very much.
+Feel free to comment or suggest improvements, I will appreciate it very much.
