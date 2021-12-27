@@ -21,7 +21,7 @@ const noteCtrl = {
         name: req.user.name,
       });
       await newNote.save();
-      res.json({ mensaje: "Nota creada" }); // este mensaje no sale
+      res.json({ mensaje: "Nota creada" }); // todo revisar mensaje
     } catch (err) {
       return res.status(500).json({ mensaje: err.message });
     }
@@ -29,7 +29,7 @@ const noteCtrl = {
   deleteNote: async (req, res) => {
     try {
       await Notes.findByIdAndDelete(req.params.id);
-      res.json({ mensaje: "Nota borrada" }); // este mensaje no sale
+      res.json({ mensaje: "Nota borrada" }); // todo revisar mensaje
     } catch (err) {
       return res.status(500).json({ mensaje: err.message });
     }
@@ -45,7 +45,7 @@ const noteCtrl = {
           date,
         }
       );
-      res.json({ mensaje: "Nota editada" }); // este mensaje no sale
+      res.json({ mensaje: "Nota editada" }); // TODO revisar mensaje no sale
     } catch (err) {
       return res.status(500).json({ mensaje: err.message });
     }

@@ -22,7 +22,7 @@ function App() {
         setIsLogin(false);
       }
     };
-    checkLogin(); // TODO ¿Igual no hace falta? Si quito esta función se desloguea
+    checkLogin(); // TODO ¿No hace falta? Si quito esta función se desloguea
   }, []);
 
   return (
