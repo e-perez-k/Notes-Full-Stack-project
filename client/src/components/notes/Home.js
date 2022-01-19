@@ -33,7 +33,7 @@ export default function Home() {
         getNotes(token);
       }
     } catch (error) {
-      window.location.href = "/"; //returns the href (URL) of the current page
+      window.location.href = "/";
     }
   };
 

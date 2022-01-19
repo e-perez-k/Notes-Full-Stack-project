@@ -2,11 +2,9 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Login from "./components/Login";
 import Notes from "./components/Notes";
-/* import "bootstrap/dist/css/bootstrap.min.css"; */
 
 function App() {
   const [isLogin, setIsLogin] = useState(false);
-  // TODO Establecer otro estado para el input registro, para que no escriba simultaneamente en los dos inputs
 
   useEffect(() => {
     const checkLogin = async () => {
@@ -22,7 +20,7 @@ function App() {
         setIsLogin(false);
       }
     };
-    checkLogin(); // TODO ¿No hace falta? Si quito esta función se desloguea
+    checkLogin();
   }, []);
 
   return (

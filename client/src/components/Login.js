@@ -12,7 +12,7 @@ export default function Login({ setIsLogin }) {
     name2: "",
     email2: "",
     password2: "",
-  }); // TODO Establecer otro estado para el input registro
+  });
 
   const [err, setErr] = useState("");
 
@@ -49,8 +49,6 @@ export default function Login({ setIsLogin }) {
       });
       setUser({ name2: "", email2: "", password2: "" });
       setErr(res.data.mensaje);
-      /* localStorage.setItem("tokenStore", res.data.token);
-      setIsLogin(true); */ // TODO debuguear error al crear la nota.
     } catch (err) {
       err.response.data.mensaje && setErr(err.response.data.mensaje);
     }
